@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>写真風クイズアプリ</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div class="quiz-container">
+
+        <div class="quiz-header">
+            <span class="category-tag">地理</span> 
+            <div id="lives-display" class="lives">
+                ❤️ ❤️ ❤️ 
+            </div>
+        </div>
+
+        <div class="score-info">
+            <span id="score-display" class="score-display">🏆 スコア: 0</span>
+            <span id="question-count" class="question-number">問題 1 / 15</span>
+        </div>
+
+        <div class="question-box">
+            <h2 id="question-text">日本で一番高い山は何ですか？</h2> 
+        </div>
+
+        <ul id="options-list">
+            </ul>
+
+        <div id="result-message" class="result-message hidden"></div>
+
+        <button id="next-button" class="next-button hidden">次の問題へ</button>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

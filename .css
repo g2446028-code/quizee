@@ -1,0 +1,119 @@
+/* 全体のリセットとフォント設定 */
+body {
+    font-family: sans-serif;
+    background-color: #f0f2f5; /* 背景を少し灰色に */
+    display: flex;
+    justify-content: center; /* 中央寄せ */
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* クイズ全体を囲むカードのデザイン */
+.quiz-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px; /* 角丸 */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* 影で浮いているように見せる */
+    width: 100%;
+    max-width: 500px; /* 最大幅を設定 */
+}
+
+/* ヘッダーのレイアウト（左にタグ、右にハート） */
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* カテゴリータグのデザイン */
+.category-tag {
+    background-color: #eee;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* スコアと問題数の情報部分 */
+.score-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* 問題文のスタイル */
+#question-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* 選択肢のリスト（箇条書きマークを削除） */
+#options-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* 各選択肢のボタン */
+.option-button {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    text-align: left;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+/* マウスを乗せたとき（ホバー）と押したとき */
+.option-button:hover:not(:disabled) {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* 正解/不正解時のボタンの色（JavaScriptでクラスを付与） */
+.option-button.correct {
+    background-color: #d4edda; /* 薄い緑 */
+    border-color: #28a745; /* 濃い緑 */
+    color: #155724;
+}
+
+.option-button.incorrect {
+    background-color: #f8d7da; /* 薄い赤 */
+    border-color: #dc3545; /* 濃い赤 */
+    color: #721c24;
+}
+
+/* メッセージと次へボタン */
+.result-message {
+    margin: 20px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.next-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* 非表示にするクラス */
+.hidden {
+    display: none !important;
+}
